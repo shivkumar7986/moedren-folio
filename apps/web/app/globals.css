@@ -1,5 +1,28 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Dirtyline';
+  src: url('/fonts/Dirtyline.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Triakis';
+  src: url('/fonts/Triakis  Font Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ClashDisplay';
+  src: url('/fonts/clashdisplay/ClashDisplay-Variable.woff2') format('woff2-variations');
+  font-weight: 200 700;
+  font-display: swap;
+}
+
 @theme {
   --font-serif: var(--font-serif), serif;
   --font-sans: var(--font-sans), sans-serif;
@@ -8,6 +31,9 @@
   --color-fg: hsl(0 0% 96%);
   --color-muted-foreground: hsl(0 0% 53%);
   --color-border-custom: hsl(0 0% 12%);
+  --font-display: 'ClashDisplay', sans-serif;
+  --font-dirtyline: 'Dirtyline', sans-serif;
+  --font-triakis: 'Triakis', sans-serif;
 }
 
 @layer base {

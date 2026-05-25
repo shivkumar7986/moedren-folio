@@ -37,9 +37,9 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
-      <main className="flex-1 min-h-screen bg-bg relative overflow-hidden flex flex-col justify-center items-center px-6 pt-24">
+      <main className="flex-1 min-h-screen bg-bg relative overflow-hidden flex flex-col justify-center items-center px-6 pt-0">
         {/* Abstract structural grid line overlays to represent premium brutalism */}
         <div className="absolute inset-0 pointer-events-none grid grid-cols-4 gap-0 max-w-7xl mx-auto h-full px-6 opacity-[0.02]">
           <div className="border-l border-r border-fg h-full" />
@@ -51,7 +51,7 @@ export default function Home() {
         {/* Hero Content Wrapper */}
         <div className="max-w-5xl mx-auto w-full z-10 text-center flex flex-col items-center">
           {/* Tagline Badge */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -61,14 +61,14 @@ export default function Home() {
             <span className="font-mono text-[10px] tracking-widest text-muted-foreground uppercase">
               CREATIVE DEVELOPER & ARCHITECT
             </span>
-          </motion.div>
+          </motion.div> */}
 
           {/* Large Editorial Headline */}
           <motion.h1
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-fg leading-[1.05] text-balance mb-8"
+            className="font-dislplay text-[9.5vw] font-semiBold tracking-tight text-fg leading-[1.0] text-balance mb-8"
           >
             {words.map((word, idx) => (
               <span key={idx} className="inline-block overflow-hidden mr-3 pb-2">
@@ -86,7 +86,7 @@ export default function Home() {
             transition={{ delay: 1.1, duration: 0.8, ease: "easeOut" }}
             className="text-muted-foreground text-base md:text-xl font-normal max-w-2xl text-center leading-relaxed mb-12 text-pretty"
           >
-            Revitalizing digital identities through bold typography grids, high-performance 
+            Revitalizing digital identities through bold typography grids, high-performance
             Next.js infrastructures, and purpose-driven animations.
           </motion.p>
 
@@ -112,24 +112,7 @@ export default function Home() {
           </motion.div>
         </div>
 
-        {/* Dynamic scroll indicator at screen bottom */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.6, duration: 0.5 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none"
-        >
-          <span className="font-mono text-[9px] tracking-widest text-muted-foreground uppercase">
-            SCROLL TO DISCOVER
-          </span>
-          <div className="w-[1px] h-12 bg-border-custom relative overflow-hidden">
-            <motion.div
-              animate={{ y: ["-100%", "100%"] }}
-              transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
-              className="absolute left-0 top-0 w-full h-1/2 bg-accent"
-            />
-          </div>
-        </motion.div>
+
       </main>
     </>
   );
